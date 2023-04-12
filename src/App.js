@@ -10,7 +10,7 @@ function App() {
             price: 30.99
         },
         {
-            date: new Date(2021, 2, 28),
+            date: new Date(2023, 2, 28),
             title: 'New jeans',
             price: 99.99
         }
