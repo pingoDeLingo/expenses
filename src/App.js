@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
     const expenses = [
@@ -15,8 +15,13 @@ function App() {
             price: 99.99
         }
     ]
+    const addExpensehandler = (expense) => {
+        console.log('In App.js');
+        console.log(expense);
+    }
     return (
         <div className="App">
+            <NewExpense onAddExpense={addExpensehandler}></NewExpense>
             <Expenses expenseData={expenses[0]}></Expenses>
             <Expenses expenseData={expenses[1]}></Expenses>
         </div>
